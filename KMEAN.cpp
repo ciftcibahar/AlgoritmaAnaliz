@@ -3,19 +3,19 @@
 void main()
 {
     int i1,i2,i3,t1,t2;
-
+    int N;
     int k0[];
     int k1[];
     int k2[];
 
-    cout<<"\nEnter 10 numbers:\n";
+    cout<<"\nEnter N numbers:\n";
     for(i1=0;i1<N;i1++)
     {
         cin>>k0[i1];
     }
 
 
-    //initial means
+    
     int m1;
     int m2;
 
@@ -24,20 +24,20 @@ void main()
     cout<<"\n Enter initial mean 2:";
     cin>>m2;
 
-    int om1,om2;    //old means
+    int om1,om2;    
 
     do
     {
 
-    //saving old means
+    
     om1=m1;
     om2=m2;
 
-    //creating clusters
+    
     i1=i2=i3=0;
     for(i1=0;i1<N;i1++)
     {
-        //calculating distance to means
+        
         t1=k0[i1]-m1;
         if(t1<0){t1=-t1;}
 
@@ -60,7 +60,7 @@ void main()
     }
 
     t2=0;
-    //calculating new mean
+  
     for(t1=0;t1<i2;t1++)
     {
         t2=t2+k1[t1];
@@ -74,7 +74,7 @@ void main()
     }
     m2=t2/i3;
 
-    //printing clusters
+    
     cout<<"\nCluster 1:";
     for(t1=0;t1<i2;t1++)
     {
@@ -97,4 +97,4 @@ void main()
     //ending
     getch();
 }
-//karmasıklık O(N.K)
+//karmasÄ±klÄ±k O(N.K)
